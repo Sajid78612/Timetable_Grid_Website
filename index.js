@@ -4,7 +4,7 @@ var columnHeaders = document.getElementById('column-headers');
 var rowHeaders = document.getElementById('row-headers');
 
 // Buttons 
-var startBtn = document.getElementById('quiz-button');
+var startBtn = document.getElementById('start-button');
 var resetBtn = document.getElementById('reset-button');
 var submitBtn = document.getElementById('submit-button');
 
@@ -23,6 +23,7 @@ function createBoxes(min, max) {
 
 		for (let j = min; j <= max; j++) {
 			var box = document.createElement('INPUT');
+			box.setAttribute('class', 'in');
 			box.setAttribute('type', 'text');
 			var boxId = i + 'x' + j;
 			box.setAttribute('id', boxId);
@@ -56,7 +57,10 @@ function createRowHeaders(min, max) {
 
 // Button Functions
 function start() {
-	var empt;
+	var selectAllEmptyBoxes = document.getElementsByClassName('in');
+	for (var i = 0; i < selectAllEmptyBoxes.length; i++) {
+		selectAllEmptyBoxes[i].value = "";
+	}
 }
 
 function submit() {
