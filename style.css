@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+#main {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.box {
+	text-align: center;
+	height: 30px;
+	width: 30px;
+}
+
+.boxes {
+	width: 360px;
+}
+
+.column-headers {
+	width: 390px;
+}
+
+.header {
+	align-items: center;
+	display: flex;
+	height: 30px;
+	justify-content: center;
+	text-align: center;
+	width: 30px;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.text-center {
+	text-align: center;
+}
