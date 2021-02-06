@@ -2,6 +2,18 @@ var boxes = document.getElementById('boxes');
 var columnHeaders = document.getElementById('column-headers');
 var rowHeaders = document.getElementById('row-headers');
 
+function test() {
+document.write("<center><table border='1px'>");
+for (var a = 1; a < 13; a++) {
+  document.write("<tr style='height:40px'>");
+  for (var b = 1; b < 13; b++) {
+    document.write("<td style='width:40px'><center><font size='4'>" + a * b + "</center></font></td>");
+  }
+  document.write("</tr>");
+}
+document.write("</table></center>");
+}
+
 function createBoxes(min, max) {
 	createColumnHeaders(min, max);
 	createRowHeaders(min, max);
@@ -41,4 +53,5 @@ function createRowHeaders(min, max) {
 	}
 }
 
-createBoxes(1,13);
+//createBoxes(1,13);
+test();
